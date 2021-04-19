@@ -1,5 +1,4 @@
 .gitignore
-.openapi-generator-ignore
 README.md
 api.module.ts
 api/account.service.ts
@@ -15,4 +14,7 @@ model/link.ts
 model/model-and-view.ts
 model/models.ts
 model/view.ts
+ng-package.json
+package.json
+tsconfig.json
 variables.ts
