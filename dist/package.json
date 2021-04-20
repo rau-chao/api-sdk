@@ -1,0 +1,26 @@
+{
+  "name": "sam-api-sdk",
+  "version": "1.0",
+  "description": "OpenAPI client for sam-api-sdk",
+  "author": "OpenAPI-Generator Contributors",
+  "keywords": [
+    "openapi-client",
+    "openapi-generator"
+  ],
+  "license": "Unlicense",
+  "peerDependencies": {
+    "@angular/core": "^11.0.0",
+    "rxjs": "^6.6.0"
+  },
+  "main": "bundles/sam-api-sdk.umd.js",
+  "module": "fesm2015/sam-api-sdk.js",
+  "es2015": "fesm2015/sam-api-sdk.js",
+  "esm2015": "esm2015/sam-api-sdk.js",
+  "fesm2015": "fesm2015/sam-api-sdk.js",
+  "typings": "sam-api-sdk.d.ts",
+  "metadata": "sam-api-sdk.metadata.json",
+  "sideEffects": false,
+  "dependencies": {
+    "tslib": "^2.0.0"
+  }
+}
