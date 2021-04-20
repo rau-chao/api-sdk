@@ -17,6 +17,7 @@ import { HttpClient, HttpHeaders, HttpParams,
 import { CustomHttpParameterCodec }                          from '../encoder';
 import { Observable }                                        from 'rxjs';
 
+import { AccountResponse } from '../model/models';
 
 import { BASE_PATH, COLLECTION_FORMATS }                     from '../variables';
 import { Configuration }                                     from '../configuration';
@@ -88,9 +89,9 @@ export class AccountApiService {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public indexUsingGET(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*'}): Observable<string>;
-    public indexUsingGET(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*'}): Observable<HttpResponse<string>>;
-    public indexUsingGET(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*'}): Observable<HttpEvent<string>>;
+    public indexUsingGET(observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*'}): Observable<AccountResponse>;
+    public indexUsingGET(observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*'}): Observable<HttpResponse<AccountResponse>>;
+    public indexUsingGET(observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*'}): Observable<HttpEvent<AccountResponse>>;
     public indexUsingGET(observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: '*/*'}): Observable<any> {
 
         let headers = this.defaultHeaders;
@@ -113,7 +114,7 @@ export class AccountApiService {
             responseType = 'text';
         }
 
-        return this.httpClient.get<string>(`${this.configuration.basePath}/account`,
+        return this.httpClient.get<AccountResponse>(`${this.configuration.basePath}/account`,
             {
                 responseType: <any>responseType,
                 withCredentials: this.configuration.withCredentials,

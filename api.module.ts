@@ -3,9 +3,6 @@ import { Configuration } from './configuration';
 import { HttpClient } from '@angular/common/http';
 
 import { AccountApiService } from './api/account.service';
-import { BasicErrorControllerApiService } from './api/basic-error-controller.service';
-import { OperationHandlerApiService } from './api/operation-handler.service';
-import { WebMvcLinksHandlerApiService } from './api/web-mvc-links-handler.service';
 
 @NgModule({
   imports:      [],
